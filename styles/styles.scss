@@ -19,6 +19,10 @@ body {
 
 body {
   background-color: $light_grayish_blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 main {
@@ -38,24 +42,29 @@ main {
     .profile {
       display: flex;
       gap: 16px;
+
       picture {
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
           border-radius: 50%;
           width: 28px;
           height: 28px;
         }
       }
+
       .name-data {
         display: flex;
         flex-direction: column;
         gap: 4px;
         color: $white;
+
         >h2 {
           font-size: 13px;
         }
+
         >p {
           opacity: 50%;
           font-size: 11px;
@@ -75,28 +84,88 @@ main {
     }
 
     &:nth-child(1) {
+      grid-area: a;
       background-color: $moderate_violet;
       background-image: url('../images/bg-pattern-quotation.svg');
       background-position: 90% 0;
       background-repeat: no-repeat;
+
+      .profile picture img {
+        border: 2px solid #A775F1;
+      }
     }
+
     &:nth-child(2) {
+      grid-area: b;
       background-color: $very_dark_grayish_blue;
-      .name-data, .headline, .review {
+
+      .name-data,
+      .headline,
+      .review {
         color: $white;
       }
     }
-    &:nth-child(3), &:nth-child(5) {
+
+    &:nth-child(3) {
+      grid-area: c;
       background-color: $white;
-      .name-data, .headline, .review {
+
+      .name-data,
+      .headline,
+      .review {
+        color: $very_dark_grayish_blue;
+      }
+
+    }   
+
+    &:nth-child(4) {
+      grid-area: d;
+      background-color: $very_dark_blackish_blue;
+
+      .profile picture img {
+        border: 2px solid #A775F1;
+      }
+
+      .name-data,
+      .headline,
+      .review {
+        color: $white;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-area: e;
+      background-color: $white;
+
+      .name-data,
+      .headline,
+      .review {
         color: $very_dark_grayish_blue;
       }
     }
-    &:nth-child(4) {
-      background-color: $very_dark_blackish_blue;
-      .name-data, .headline, .review {
-        color: $white;
-      }
-    }
+  }
+}
+
+@media (min-width: 576px) {
+  main {
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    max-width: 1110px;
+    padding: 16px;
+    display: grid;
+    grid-template-areas: "a a b e"
+      "c d d e";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }

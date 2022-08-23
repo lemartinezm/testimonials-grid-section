@@ -11,6 +11,16 @@ body {
 
 body {
   background-color: hsl(210deg, 46%, 95%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
 }
 
 main {
@@ -88,26 +98,72 @@ main article .review {
   opacity: 70%;
 }
 main article:nth-child(1) {
+  grid-area: a;
   background-color: hsl(263deg, 55%, 52%);
   background-image: url("../images/bg-pattern-quotation.svg");
   background-position: 90% 0;
   background-repeat: no-repeat;
 }
+main article:nth-child(1) .profile picture img {
+  border: 2px solid #A775F1;
+}
 main article:nth-child(2) {
+  grid-area: b;
   background-color: hsl(217deg, 19%, 35%);
 }
-main article:nth-child(2) .name-data, main article:nth-child(2) .headline, main article:nth-child(2) .review {
+main article:nth-child(2) .name-data,
+main article:nth-child(2) .headline,
+main article:nth-child(2) .review {
   color: hsl(0deg, 0%, 100%);
 }
-main article:nth-child(3), main article:nth-child(5) {
+main article:nth-child(3) {
+  grid-area: c;
   background-color: hsl(0deg, 0%, 100%);
 }
-main article:nth-child(3) .name-data, main article:nth-child(3) .headline, main article:nth-child(3) .review, main article:nth-child(5) .name-data, main article:nth-child(5) .headline, main article:nth-child(5) .review {
+main article:nth-child(3) .name-data,
+main article:nth-child(3) .headline,
+main article:nth-child(3) .review {
   color: hsl(217deg, 19%, 35%);
 }
 main article:nth-child(4) {
+  grid-area: d;
   background-color: hsl(219deg, 29%, 14%);
 }
-main article:nth-child(4) .name-data, main article:nth-child(4) .headline, main article:nth-child(4) .review {
+main article:nth-child(4) .profile picture img {
+  border: 2px solid #A775F1;
+}
+main article:nth-child(4) .name-data,
+main article:nth-child(4) .headline,
+main article:nth-child(4) .review {
   color: hsl(0deg, 0%, 100%);
+}
+main article:nth-child(5) {
+  grid-area: e;
+  background-color: hsl(0deg, 0%, 100%);
+}
+main article:nth-child(5) .name-data,
+main article:nth-child(5) .headline,
+main article:nth-child(5) .review {
+  color: hsl(217deg, 19%, 35%);
+}
+
+@media (min-width: 576px) {
+  main {
+    max-width: 500px;
+  }
+}
+@media (min-width: 768px) {
+  main {
+    max-width: 700px;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    max-width: 1110px;
+    padding: 16px;
+    display: grid;
+    grid-template-areas: "a a b e" "c d d e";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }/*# sourceMappingURL=styles.css.map */
