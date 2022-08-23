@@ -1,0 +1,113 @@
+html {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+h2,
+p,
+body {
+  margin: 0;
+}
+
+body {
+  background-color: hsl(210deg, 46%, 95%);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 24px;
+  padding: 96px 24px;
+}
+main article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 24px 32px;
+  -webkit-box-shadow: 0 5px 20px -15px hsl(219deg, 29%, 14%);
+          box-shadow: 0 5px 20px -15px hsl(219deg, 29%, 14%);
+}
+main article .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+main article .profile picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main article .profile picture img {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+}
+main article .profile .name-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+  color: hsl(0deg, 0%, 100%);
+}
+main article .profile .name-data > h2 {
+  font-size: 13px;
+}
+main article .profile .name-data > p {
+  opacity: 50%;
+  font-size: 11px;
+}
+main article .headline {
+  font-size: 20px;
+  font-weight: 600;
+  color: hsl(0deg, 0%, 100%);
+}
+main article .review {
+  color: hsl(0deg, 0%, 100%);
+  opacity: 70%;
+}
+main article:nth-child(1) {
+  background-color: hsl(263deg, 55%, 52%);
+  background-image: url("../images/bg-pattern-quotation.svg");
+  background-position: 90% 0;
+  background-repeat: no-repeat;
+}
+main article:nth-child(2) {
+  background-color: hsl(217deg, 19%, 35%);
+}
+main article:nth-child(2) .name-data, main article:nth-child(2) .headline, main article:nth-child(2) .review {
+  color: hsl(0deg, 0%, 100%);
+}
+main article:nth-child(3), main article:nth-child(5) {
+  background-color: hsl(0deg, 0%, 100%);
+}
+main article:nth-child(3) .name-data, main article:nth-child(3) .headline, main article:nth-child(3) .review, main article:nth-child(5) .name-data, main article:nth-child(5) .headline, main article:nth-child(5) .review {
+  color: hsl(217deg, 19%, 35%);
+}
+main article:nth-child(4) {
+  background-color: hsl(219deg, 29%, 14%);
+}
+main article:nth-child(4) .name-data, main article:nth-child(4) .headline, main article:nth-child(4) .review {
+  color: hsl(0deg, 0%, 100%);
+}/*# sourceMappingURL=styles.css.map */
